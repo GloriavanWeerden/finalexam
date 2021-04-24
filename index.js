@@ -8,7 +8,7 @@ module.exports = class extends Page {
     render(sPage) {
         const oJson = fetch("https://ux-308-e4737-default-rtdb.firebaseio.com/meals.json").json();
         console.log(oJson);
-        let sResult = "<h1>Upcoming Popup Meals</h1>";
+        let sResult = "<h1>Mother's Day Breakfast and Brunch Popup Meal</h1>";
         Object.keys(oJson).map((key) => {
             const oEntity = oJson[key];
             console.log(oEntity);
@@ -17,7 +17,7 @@ module.exports = class extends Page {
             <h2>${oEntity.title}</h2>
             <p><img src="${oEntity.featured_image}" alt="${oEntity.title}"</p>
             <p>${oEntity.full_description}</p>
-            <form action="https://serene-taiga-04277.herokuapp.com/payment" method="post">
+            <form action="http://localhost:3002/payment" method="post">
             <input type="hidden" name="title" value="${oEntity.title}" />
             <input type="hidden" name="price" value="21" />
             <input type="tel" placeholder="enter your number" name="telephone"/>

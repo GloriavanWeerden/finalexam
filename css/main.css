@@ -2,9 +2,9 @@
 
 /* color scheme */
 :root {
-    --header-bg-color: #EE97AE;
-    --header-txt-color: #aaa;
-    --header-highlight-color: white;
+    --header-bg-color: #ff80a2;
+    --header-txt-color: rgb(248, 248, 248);
+    --header-highlight-color: rgb(255, 255, 255);
 }
 
 .contact .navbar-inverse .navbar-nav > li > a[href="contact.html"], 
