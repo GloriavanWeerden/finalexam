@@ -3,10 +3,10 @@ const Page = require("./_layout/Default");
 
 module.exports = class extends Page {
     constructor(){
-        super({title:"Home", sName:"Richard Hildred"});
+        super({title:"Home", sName:"Gloria van Weerden"});
     }
     render(sPage) {
-        const oJson = fetch("https://prog8110winter2021section2-default-rtdb.firebaseio.com/meals.json").json();
+        const oJson = fetch("https://ux-308-e4737-default-rtdb.firebaseio.com/meals.json").json();
         console.log(oJson);
         let sResult = "<h1>Upcoming Popup Meals</h1>";
         Object.keys(oJson).map((key) => {
@@ -24,7 +24,22 @@ module.exports = class extends Page {
             <button type="submit">Order now</button>
             </form>
             `;
-        });
+        
+        }); 
         return sResult;
     }
+        //
+        //
+        //Object.keys(oJson).map((key) => {
+          //  const oEntity = oJson[key];
+            //console.log(oEntity);
+            //oEntity.id = key;
+            //
+            //<h2>${oEntity.title}</h2>
+           
+            //</form>
+            //`;
+        //});
+        
+    //}
 }
