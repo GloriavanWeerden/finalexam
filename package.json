@@ -4,6 +4,7 @@
   },
   "dependencies": {
     "marked": "^1.2.5",
+    "pouchdb": "^7.2.2",
     "sharp": "^0.27.0",
     "sync-fetch": "^0.3.0"
   }

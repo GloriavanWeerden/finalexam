@@ -4,6 +4,7 @@ const Page = require("./_layout/Default");
 module.exports = class extends Page {
     constructor(){
         super({title:"Home", sName:"Gloria van Weerden"});
+        this.nSubtotal = 0.00;
     }
     render(sPage) {
         const oJson = fetch("https://ux-308-e4737-default-rtdb.firebaseio.com/meals.json").json();
@@ -15,31 +16,26 @@ module.exports = class extends Page {
             oEntity.id = key;
             sResult += `
             <h2>${oEntity.title}</h2>
-            <p><img src="${oEntity.featured_image}" alt="${oEntity.title}"</p>
-            <p>${oEntity.full_description}</p>
-            <form action="http://localhost:3002/payment" method="post">
-            <input type="hidden" name="title" value="${oEntity.title}" />
-            <input type="hidden" name="price" value="21" />
-            <input type="tel" placeholder="enter your number" name="telephone"/>
-            <button type="submit">Order now</button>
-            </form>
-            `;
+            <div class="row">
+                <div class="column">
+                    <p><img src="${oEntity.featured_image}" 
+                        alt="${oEntity.title}"
+                        width="500"
+                        >
+                    </p>
+                </div>
+            <div class="column">
+                <p>${oEntity.full_description}</p>
+                <form action="https://serene-taiga-04277.herokuapp.com/payment" method="post">
+                <input type="hidden" name="title" value="${oEntity.title}" />
+                <input type="hidden" name="price" value="25" />
+                <input type="tel" placeholder="enter your number" name="telephone"/>
+                <button type="submit">Order this meal.</button>
+                </form></div>
+                </div>
+                `;
         
         }); 
         return sResult;
     }
-        //
-        //
-        //Object.keys(oJson).map((key) => {
-          //  const oEntity = oJson[key];
-            //console.log(oEntity);
-            //oEntity.id = key;
-            //
-            //<h2>${oEntity.title}</h2>
-           
-            //</form>
-            //`;
-        //});
-        
-    //}
 }
