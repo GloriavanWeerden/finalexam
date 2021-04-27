@@ -7,9 +7,9 @@ module.exports = class extends Page {
         this.nSubtotal = 0.00;
     }
     render(sPage) {
-        const oJson = fetch("https://ux-308-e4737-default-rtdb.firebaseio.com/meals.json").json();
+        const oJson = fetch("https://finalexam-82022-default-rtdb.firebaseio.com/meals.json").json();
         console.log(oJson);
-        let sResult = "<h1>Mother's Day Breakfast and Brunch Popup Meal</h1>";
+        let sResult = "<h1>Mrs. Colour's Painting Classes</h1>";
         Object.keys(oJson).map((key) => {
             const oEntity = oJson[key];
             console.log(oEntity);
