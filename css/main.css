@@ -85,6 +85,11 @@ input{
     font-family: "Tahoma";
     border-radius: 6px;
 }
+
+.form-group {
+    font-size: 20px;
+
+}
 ::placeholder {  
     font-size: 20px;
     font-family: "Tahoma";
@@ -93,7 +98,8 @@ input{
 .row {
     border: 3px black;
 }
-  .column {
+
+.column {
     float:left;
     width: 50%;
     text-align: center;
