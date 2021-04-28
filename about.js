@@ -6,7 +6,16 @@ module.exports = class extends Page {
     }
     render(sPage) {  
         return `
-        ${this.requireMarked('_pages/about.md')}
+        <div class="row">
+            <div class="column">
+                <p><img src="https://unsplash.com/photos/GTYU1zvhv3U/download?force=true&w=1920" 
+                width="600">
+                </p>
+            </div>
+            <div class="column">
+                <p> ${this.requireMarked('_pages/about.md')}</p>
+            </div>
+        </div>
         `;
-    }
-}
+    }                                      
+ }

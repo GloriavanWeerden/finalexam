@@ -1,4 +1,3 @@
 # About
 
-About page here.
-https://unsplash.com/photos/GTYU1zvhv3U/download?force=true&w=1920
+At Colour's studio, we hope to brighten up the gloom of the pandemic with the art of painting. We offer courses for everyone and for all skill levels. Mrs. Colour's has been travelling and teaching art for 40 years and welcomes you to learn.  
